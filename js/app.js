@@ -25,3 +25,18 @@ var App = React.createClass({
 	}
 
 });
+
+// this is responsible for drawing the various container divs
+// and setting each of the classes used in the animation to flip from front to back
+var Flipper = React.createClass({
+
+	render: function () {
+		return 	<div className={"flipper-container " + this.props.orientation}>
+					<div className={"flipper" + (this.props.flipped ? "flipped" : "")}>
+						<Front>the front!</Front>
+						<Back>the back!</Back>
+					</div>
+				</div>;
+	}
+
+}); 
