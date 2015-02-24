@@ -39,4 +39,22 @@ var Flipper = React.createClass({
 				</div>;
 	}
 
-}); 
+});
+
+// Front and Back classes are responsible for showing the appropriate content based on the flipped status
+// of the parent Flipper class
+// the children prop contains the child content of the class
+var Front = React.createClass({
+	render: function () {
+		return <div className="front tite">{this.props.children}</div>;
+	}
+});
+
+var Back = React.createClass({
+	render: function () {
+		return <div className="back tile">{this.props.children}</div>
+	}
+});
+
+// Render to DOM element
+React.render(<App />, document.getElementById("main"));
